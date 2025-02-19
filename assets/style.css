@@ -1,0 +1,200 @@
+:root {
+    --primary-blue: #1a4b8c;
+    --accent-yellow: #ffd700;
+    --table-bg: rgba(255, 255, 255, 0.05);
+    --table-hover: rgba(255, 255, 255, 0.1);
+    --table-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background: linear-gradient(135deg, var(--primary-blue), #0a2351);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.main-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 1rem;
+}
+
+.title h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.title h1 span {
+    color: var(--accent-yellow);
+}
+
+.subtitle {
+    color: var(--accent-yellow);
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.icon-container {
+    background: rgba(255, 255, 255, 0.1);
+    width: 150px;
+    height: 150px;
+    margin: 2rem auto;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.icon-container img {
+    width: 100%;
+    height: auto;
+}
+
+.nav-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 10px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background: var(--accent-yellow);
+    color: var(--primary-blue);
+    transform: translateY(-2px);
+}
+
+.buttons-container {
+    margin-top: 2rem;
+}
+
+/* Modern Table Styles */
+.modern-table {
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--table-border);
+    backdrop-filter: blur(10px);
+    margin: 1rem 0;
+}
+
+.modern-table .table {
+    margin-bottom: 0;
+    background: transparent;
+    color: white;
+}
+
+.modern-table thead {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.modern-table th {
+    border: none;
+    padding: 1rem;
+    font-weight: 500;
+    color: var(--accent-yellow);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.modern-table td {
+    padding: 1rem;
+    border-color: var(--table-border);
+    vertical-align: middle;
+}
+
+.modern-table tbody tr {
+    transition: all 0.3s ease;
+    background: var(--table-bg);
+}
+
+.modern-table tbody tr:hover {
+    background: var(--table-hover);
+    transform: scale(1.01);
+}
+
+.modern-table .deposit-amount {
+    color: #30ff1e;
+    font-weight: 500;
+}
+
+.modern-table .withdrawal-amount {
+    color: #ff4444;
+    font-weight: 500;
+}
+
+/* Status Badges */
+.badge {
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.badge-deposit {
+    background: rgba(0, 255, 157, 0.2);
+    color: #00ff9d;
+}
+
+.badge-withdrawal {
+    background: rgba(255, 68, 68, 0.2);
+    color: #ff4444;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.btn-action {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-action:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn-action svg {
+    width: 16px;
+    height: 16px;
+}
+
+.btn-edit {
+    color: var(--accent-yellow);
+}
+
+.btn-delete {
+    color: #ff4444;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .modern-table {
+        border-radius: 10px;
+    }
+    
+    .modern-table th,
+    .modern-table td {
+        padding: 0.75rem;
+    }
+} 
